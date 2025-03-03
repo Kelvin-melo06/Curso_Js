@@ -30,4 +30,4 @@ function tipo_pagamento(pagamento, preco_etiqueta){
     let pagamento_tipo = 'Dinheiro';
     let condicao_De_Pagamento = tipo_pagamento(pagamento_tipo, preco_etiqueta);
     console.log(`No ${pagamento_tipo} o valor final fica ${condicao_De_Pagamento} Reais`);
-}())
+}());
