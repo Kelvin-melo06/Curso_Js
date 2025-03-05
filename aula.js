@@ -7,7 +7,7 @@ class Pessoa {
     constructor(name, age){
         this.name = name;
         this.age = age;
-        this.year_of_born = 2025 - age;
+        this.year_of_born = new Date().getFullYear() - age;
     }
     
 
@@ -29,7 +29,7 @@ function comparando_pessoas(p1, p2){ //Função recebendo objetos como parametro
 const Kelvin = new Pessoa('Kelvin', 18);
 const Laura = new Pessoa('Laura', 18); 
 
-comparando_pessoas((Kelvin, Laura));
+comparando_pessoas(Kelvin, Laura);
 
 
 
