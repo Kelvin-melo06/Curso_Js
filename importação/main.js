@@ -1,0 +1,1 @@
+const funcoes = require('./funcoesauxiliares') // o REQUIRE serve para importação do que está sendo exportado
