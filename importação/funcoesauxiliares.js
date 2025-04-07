@@ -1,8 +1,10 @@
-
-
+const valoresEntrada = [5,50,19,98,23];
+let i = 0;
 
 function gets(){
-    return 10;
+    let valor = valoresEntrada[i];
+    i++;
+    return valor;
 }
 
 function print(texto){
