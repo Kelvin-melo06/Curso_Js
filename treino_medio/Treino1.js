@@ -16,4 +16,4 @@ function filtrarPessoas(pesssoas){
    })
 }
 
-console.log(filtrarPessoas(pessoas))
+console.log(filtrarPessoas(pessoas));
