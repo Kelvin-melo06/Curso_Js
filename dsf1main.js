@@ -6,3 +6,9 @@ function gets(){
     i++;
     return valor;
 }
+
+function print(texto){
+    console.log(texto);
+}
+
+module.export = {gets, print};
