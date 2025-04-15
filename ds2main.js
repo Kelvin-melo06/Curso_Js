@@ -10,6 +10,7 @@ while(true){
     valor.push(numeros);
 }
 
+
 let maiorPar = 0;
 let maiorImpar = 0;
 
