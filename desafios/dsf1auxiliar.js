@@ -1,4 +1,4 @@
-const entrada = [7.5, 5.5, 4.5, 8.5];
+const entrada = [7.5, 9.5, 7.5, 8.5];
 let i = 0;
 
 function gets(){

@@ -9,7 +9,6 @@ while(true){
     notas.push(nota);
 }
 
-
 const media_Aluno = (n) =>{
     let soma = 0;
     for(let i = 0; i < n.length; i++){
@@ -21,11 +20,11 @@ const media_Aluno = (n) =>{
 const media = media_Aluno(notas);
 
 if(media < 5){
-    print("Reprovado!")
+    print("Reprovado!");
 } else if(media >= 5 && media < 7){
-    print("Recuperação!")
+    print("Recuperação!");
 } else{
-    print("Aprovado!")
+    print("Aprovado!");
 }
 
 print(media_Aluno(notas));
