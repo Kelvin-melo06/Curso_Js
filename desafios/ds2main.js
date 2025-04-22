@@ -10,21 +10,24 @@ while(true){
     valor.push(numeros);
 }
 
-
-let maiorPar = 0;
-let maiorImpar = 0;
+let maiorPar = null;
+let menorImpar = null;
 
 valor.forEach(num =>{
     if(num % 2 === 0){
-        if(num > maiorPar){
+        if(maiorPar === null){
+            maiorPar = num;
+        }else if(num > maiorPar){
             maiorPar = num;
         }
     }else{
-        if(num > maiorImpar){
-            maiorImpar = num;
+        if(menorImpar === null){
+            menorImpar = num;
+        }else if(num < menorImpar){
+            menorImpar = num;
         }
     }
 })
 
 print(`Maior numero par : ${maiorPar}`);
-print(`Maior número impar: ${maiorImpar}`);
+print(`Menor número impar: ${menorImpar}`);
