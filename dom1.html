@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <div id ="caixa"></div>
+    <button id="NovoP">Adicionar</button>
+
+    <script>
+        let caixa = document.getElementById("caixa");
+        let botao = document.getElementById("NovoP");
+
+        botao.addEventListener("click", () => {
+            let p = document.createElement("p");
+            p.innerText = "Novo Parágrafo";
+            caixa.appendChild(p);
+        });
+
+    </script>
+</body>
+</html>
