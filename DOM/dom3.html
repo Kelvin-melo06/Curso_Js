@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1>Lista de tarefas com status de concluída</h1>
+    <input type="text" name="tarefa" id="itarefa" placeholder="Digite uma tarefa">
+    <button id="btarefa">Adicionar</button>
+    <button id="filtro-concluidas">Concluídas</button>
+    <button id="filtro-pendentes">Pendentes</button>
+    <button id="filtro-todosBotao">Todas</button>
+    <ul id="lista"></ul>
+
+    <script>
+
+        let tarefas = document.getElementById('itarefa');
+        let botaoAdicionar = document.getElementById('btarefa');
+        let listaTarefas = document.getElementById('lista');
+
+
+        botaoAdicionar.addEventListener("click", () => {
+            if (tarefas.value === "") {
+                alert("Digite uma tarefa!");
+                tarefas.focus();
+                return;
+            }
+
+            let li = document.createElement('li');
+            li.classList.add("filtro-pendente");
+            let texto = document.createTextNode(tarefas.value);
+
+
+            let botaoConcluir = document.createElement('button');
+            botaoConcluir.innerText = "Concluir";
+            botaoConcluir.addEventListener("click", () => {
+                li.classList.toggle("filtro-concluida");
+                li.classList.toggle("filtro-pendente");
+            })
+
+
+            let botaoRemover = document.createElement('button');
+            botaoRemover.innerText = "Remover";
+            botaoRemover.addEventListener("click", () => {
+                li.remove();
+            })
+
+
+            li.appendChild(botaoConcluir);
+            li.appendChild(botaoRemover);
+            li.appendChild(texto);
+            listaTarefas.appendChild(li);
+            tarefas.value = "";
+            tarefas.focus();
+
+        })
+
+        document.getElementById("filtro-todosBotao").addEventListener("click", () => {
+            let tarefas = document.querySelectorAll("#lista li");
+            tarefas.forEach((tarefa) => {
+                tarefa.style.display = "block";
+            })
+        })
+
+        document.getElementById("filtro-concluidas").addEventListener("click", () => {
+            let tarefas = document.querySelectorAll("#lista li");
+            tarefas.forEach((tarefa) => {
+                if (tarefa.classList.contains("filtro-concluida")) {
+                    tarefa.style.display = "block";
+                } else {
+                    tarefa.style.display = "none";
+                }
+            })
+        })
+
+        document.getElementById("filtro-pendentes").addEventListener("click", () => {
+            let tarefas = document.querySelectorAll("#lista li");
+            tarefas.forEach((tarefa) => {
+                if (tarefa.classList.contains("filtro-pendente")) {
+                    tarefa.style.display = "block";
+                } else {
+                    tarefa.style.display = "none";
+                }
+            })
+        })
+    </script>
+</body>
+</html>
