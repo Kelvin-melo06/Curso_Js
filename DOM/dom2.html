@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1> Lista de Tarefa Simples </h1>
+    <input type="text" name="tarefa" id="itarefa" placeholder="Digite uma tarefa">
+    <button id="Novatarefa">Adicionar</button>
+    <ul id="listatarefa"></ul>
+
+    <script>
+        let tarefas = document.getElementById("itarefa");
+        let botao = document.getElementById("Novatarefa");
+        botao.addEventListener("click", () => {
+            if(tarefas.value == ""){
+                alert("Digite uma tarefa!");
+                tarefas.focus();
+                return
+            }
+            let li = document.createElement("li");
+            let lista = document.getElementById("listatarefa");
+            let remover = document.createElement("button");
+            li.innerText = tarefas.value;
+            remover.innerText = "Remover";
+            remover.addEventListener("click", () => {
+                li.remove();
+            })
+            li.appendChild(remover);
+            lista.appendChild(li);
+            tarefas.value = "";
+            tarefas.focus();
+        })
+       
+    </script>
+</body>
+</html>
