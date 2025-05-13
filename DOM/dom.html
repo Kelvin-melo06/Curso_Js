@@ -11,12 +11,34 @@
 
     <script>
         let botao = document.getElementById("adicionarP");
+        const caixa = document.getElementById("caixa");
+
+        
         botao.addEventListener("click", adicionarP);
+
+
         function adicionarP() {
-            const caixa = document.getElementById("caixa");
+            if(caixa.childElementCount >= 5){
+                alert("Máximo de 5 elementos atingido!");
+                return;
+            }
+
+            let container = document.createElement("div");
+            
             const p = document.createElement("p");
-            p.innerText = "Olá, Mundo!";
-            caixa.appendChild(p);
+            p.textContent = "Olá, Mundo!";
+
+            let remover = document.createElement("button");
+            remover.textContent = "Remover";
+            remover.addEventListener("click", () =>{
+                caixa.removeChild(container);
+                alert("Elemento removido!");
+            });
+
+            container.appendChild(p);
+            container.appendChild(remover);
+            caixa.appendChild(container);
+            
         }
     </script>
 </body>

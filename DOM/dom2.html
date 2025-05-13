@@ -12,26 +12,35 @@
     <ul id="listatarefa"></ul>
 
     <script>
-        let tarefas = document.getElementById("itarefa");
+        
+        let input_Tarefas = document.getElementById("itarefa");
         let botao = document.getElementById("Novatarefa");
+        let ul_Lista = document.getElementById("listatarefa");
+
+
         botao.addEventListener("click", () => {
-            if(tarefas.value == ""){
+            if(input_Tarefas.value == ""){
                 alert("Digite uma tarefa!");
-                tarefas.focus();
+                input_Tarefas.focus();
                 return;
             }
+
+
             let li = document.createElement("li");
-            let lista = document.getElementById("listatarefa");
             let remover = document.createElement("button");
-            li.innerText = tarefas.value;
-            remover.innerText = "Remover";
+
+            li.textContent = input_Tarefas.value;
+            li.style.marginBottom = "10px";
+            remover.textContent = "Remover";
+            remover.style.marginLeft = "10px";
             remover.addEventListener("click", () => {
                 li.remove();
             })
+
             li.appendChild(remover);
-            lista.appendChild(li);
-            tarefas.value = "";
-            tarefas.focus();
+            ul_Lista.appendChild(li);
+            input_Tarefas.value = "";
+            input_Tarefas.focus();
         })
        
     </script>

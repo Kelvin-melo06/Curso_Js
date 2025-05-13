@@ -10,12 +10,12 @@
     <button id="NovoP">Adicionar</button>
 
     <script>
-        let caixa = document.getElementById("caixa");
-        let botao = document.getElementById("NovoP");
+        const caixa = document.getElementById("caixa");
+        const botao = document.getElementById("NovoP");
 
         botao.addEventListener("click", () => {
             let p = document.createElement("p");
-            p.innerText = "Novo Parágrafo";
+            p.textContent = "Novo Parágrafo";
             caixa.appendChild(p);
         });
 
