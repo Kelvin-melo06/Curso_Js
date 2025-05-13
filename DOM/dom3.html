@@ -34,7 +34,7 @@
 
 
             let botaoConcluir = document.createElement('button');
-            botaoConcluir.innerText = "Concluir";
+            botaoConcluir.textContent = "Concluir";
             botaoConcluir.addEventListener("click", () => {
                 li.classList.toggle("filtro-concluida");
                 li.classList.toggle("filtro-pendente");
@@ -42,7 +42,7 @@
 
 
             let botaoRemover = document.createElement('button');
-            botaoRemover.innerText = "Remover";
+            botaoRemover.textContent = "Remover";
             botaoRemover.addEventListener("click", () => {
                 li.remove();
             })

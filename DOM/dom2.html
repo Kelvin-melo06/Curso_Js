@@ -12,7 +12,7 @@
     <ul id="listatarefa"></ul>
 
     <script>
-        
+
         let input_Tarefas = document.getElementById("itarefa");
         let botao = document.getElementById("Novatarefa");
         let ul_Lista = document.getElementById("listatarefa");
@@ -41,6 +41,12 @@
             ul_Lista.appendChild(li);
             input_Tarefas.value = "";
             input_Tarefas.focus();
+        })
+
+        input_Tarefas.addEventListener("keypress", (e) => {
+            if(e.key == "Enter"){
+                botao.click();
+            }
         })
        
     </script>
