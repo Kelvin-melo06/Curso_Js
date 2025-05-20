@@ -1,11 +1,6 @@
-let quantidadeLetrasA = (str) =>{
-    let contador = 0;
-    for(let i = 0; i <= str.length; i++){
-        if(str[i] === 'a' || str[i] === 'A'){
-            contador++;
-        }
-    }
-    return contador;
+let iniciaisNome = (str) =>{
+    return str.split(" ").map((n) => n[0].toUpperCase()).join(".");
 }
 
-console.log(quantidadeLetrasA("A casa é amarela")); // 4
+
+console.log(iniciaisNome("Lucas Silva"));
