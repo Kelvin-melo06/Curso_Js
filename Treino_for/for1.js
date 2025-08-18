@@ -13,6 +13,7 @@ for(let i = 0; i < primo.length; i++) {
             break;
         }
     }
+    
     if(ehprimo){
         console.log(primo[i] + " é primo.");
     } else {
