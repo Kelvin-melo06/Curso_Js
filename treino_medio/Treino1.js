@@ -1,19 +1,31 @@
 let pessoas =[
-    {nome: 'Kelvin', idade: 18, profissão: 'programador'},
-    {nome: 'João', idade: 35, profissão: 'Desenvolvedor'},
-    {nome: 'Marcelo', idade: 25, profissão: 'Jogador'},
-    {nome: 'Henrique', idade: 40, profissão: 'DevOps'}
-]
+ {nome: 'Kelvin', idade: 18, profissão: 'programador'},
+ {nome: 'João', idade: 35, profissão: 'Desenvolvedor'},
+ {nome: 'Marcelo', idade: 25, profissão: 'Jogador'},
+ {nome: 'Henrique', idade: 40, profissão: 'DevOps'}
+];
 
-function filtrarPessoas(pessoal){
-   // Filtrar quem tem mais de 30 anos
-   let mais_De_30 = pessoal.filter(pessoal => pessoal.idade > 30);
-   
-   // Acessando os objetos da array filtrada e modificando a propriedade profissão
-   mais_De_30.forEach(pessoal => {
-    pessoal.profissão = 'Desconhecida'
-    console.log(`Nome: ${pessoal.nome}, Profissão: ${pessoal.profissão}`);
-   })
+function filtrarEAtualizarPessoas(pesssoas){
+    // Usamos map para criar uma NOVA array de NOVOS objetos
+    let pessoasAtualizadas = pessoas.map(pessoa => {
+        // Se a pessoa tiver mais de 30 anos, criamos uma cópia do objeto
+        // e alteramos a profissão. Caso contrário, mantemos o objeto original.
+        if (pessoa.idade > 30) {
+            return {
+                ...pessoa, // Sintaxe 'spread' para copiar todas as propriedades
+                profissão: 'Desconhecida'
+            };
+        }
+        return pessoa;
+    });
+
+    return pessoasAtualizadas;
 }
 
-console.log(filtrarPessoas(pessoas));
+const novaListaDePessoas = filtrarEAtualizarPessoas(pessoas);
+
+// A array original 'pessoas' NÃO FOI ALTERADA
+console.log(pessoas);
+
+// A nova array 'novaListaDePessoas' TEM OS OBJETOS ALTERADOS
+console.log(novaListaDePessoas);
