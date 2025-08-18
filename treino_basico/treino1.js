@@ -8,11 +8,6 @@ let numeros = [5, 12, 8, 130, 44];
 let maioresQueDez = numeros.filter(num => num > 10);
 console.log(maioresQueDez)
 
-*/
-
-
-
-
 /* 
 
 .MAP() ELE CRIA UMA NOVA ARRAY PEGANDO OS ELEMENTOS DA ARRAY ORIGINAL E TRANFORMANDO SEUS VALORES USANDO UMA CALLBACK
