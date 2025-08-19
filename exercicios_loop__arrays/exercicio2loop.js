@@ -1,4 +1,8 @@
-const lista_Numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+const lista_Numeros = [];
+
+for(let i = 0; i <= 13; i++){
+    lista_Numeros.push(i);
+}
 
 
 for (let i = 0; i < lista_Numeros.length; i++) {
