@@ -4,7 +4,7 @@ let contarVogais = (palavra) => {
 
     for (let i = 0; i < palavra.length; i++) {
         if ('aeiou'.includes(palavra[i])) {
-            contador++;
+             return contador++;
         }
     }
 
