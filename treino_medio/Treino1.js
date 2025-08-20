@@ -5,7 +5,7 @@ let pessoas =[
  {nome: 'Henrique', idade: 40, profissão: 'DevOps'}
 ];
 
-function filtrarEAtualizarPessoas(pesssoas){
+function filtrarEAtualizarPessoas(pessoas){
     // Usamos map para criar uma NOVA array de NOVOS objetos
     let pessoasAtualizadas = pessoas.map(pessoa => {
         // Se a pessoa tiver mais de 30 anos, criamos uma cópia do objeto

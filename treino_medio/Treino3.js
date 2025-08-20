@@ -18,7 +18,7 @@ let soma = 0;
 
 notas.forEach(alunos => {
     soma += alunos.nota;
-})
+});
 
 let media = soma / notas.length;
 
