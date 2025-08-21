@@ -9,7 +9,7 @@ console.log(somaInfinita(1, 2, 3, 4, 5)); // Saída: 15
 
 
 const somaInfinita2 = (...numeros) => {
-    let total= 0;
+    let total= 1;
     for(let numero of numeros) { // Percorre cada número nos argumentos
         total += numero;
     }
