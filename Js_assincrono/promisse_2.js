@@ -11,3 +11,5 @@ Promise.all([promessa1, promessa2])
     });
 
 console.log('Aguardando todas as promessas...');
+
+// Promise.all é usado para aguardar a conclusão de múltiplas promessas. Ele retorna uma nova promessa que é resolvida quando todas as promessas no array são resolvidas, ou rejeitada se qualquer uma das promessas for rejeitada. No exemplo acima, esperamos que duas promessas sejam concluídas antes de prosseguir.
