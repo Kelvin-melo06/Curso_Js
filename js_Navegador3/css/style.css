@@ -1,0 +1,10 @@
+.estilo-imgs-galeria{
+    width: 400px;
+    display: inline-block;
+}
+
+.container-galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
