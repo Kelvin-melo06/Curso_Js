@@ -1,4 +1,4 @@
-const lista = document.querySelector("ul");
+const lista = document.querySelector('ul');
 
 // ------------------------REPLACECHILD-------------------------------------
 
