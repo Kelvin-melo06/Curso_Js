@@ -1,0 +1,21 @@
+.itemLista{
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.destaque{
+    background-color: rgb(53, 49, 49);
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+#minhaLista{
+    display: flex;
+}

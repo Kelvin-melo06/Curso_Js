@@ -1,0 +1,9 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.destaque-azul {
+    background-color: lightblue;
+    border-color: blue;
+}
